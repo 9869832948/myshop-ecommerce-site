@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyShop Admin</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f6f9;
+        }
+
+        .sidebar {
+            height: 100vh;
+            background: #212529;
+            color: white;
+            position: fixed;
+            width: 250px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 12px;
+        }
+
+        .sidebar a:hover {
+            background: #0d6efd;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .card-box {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar p-3">
+    <h4 class="text-center mb-4">MyShop Admin</h4>
+
+      
+    <a href="@Url.Action("Dashboard", "Admin")"><i class="bi bi-speedometer2"></i> Dashboard</a>
+    <a href="@Url.Action("Profile","Admin")"><i class="bi bi-person"></i> Profile</a>
+    <a href="@Url.Action("fetchCategory","Admin")"><i class="bi bi-folder"></i> Category</a>
+    <a href="@Url.Action("fetchProduct","Admin")"><i class="bi bi-box"></i> Products</a>
+    <a href="/Admin/Orders"><i class="bi bi-cart"></i> Orders</a>
+    <a href="@Url.Action("fetchCustomer","Admin")"><i class="bi bi-people"></i>Customers</a>
+    <a href="@Url.Action("Logout","Admin")"><i class="bi bi-box-arrow-right"></i> Logout</a>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+
+    @RenderBody()
+
+</div>
+
+</body>
+</html>
