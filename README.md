@@ -1,1 +1,2 @@
-# myshop2
+# myshop
+# Online ecommerce website
